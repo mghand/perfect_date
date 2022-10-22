@@ -1,1 +1,13 @@
-hello
+{% extends 'base.html' %}
+
+{% block title %}ReqApp{% endblock %}
+
+{% block content %}
+<div class="row">
+    <div class="col-9">
+        {% for item in object_list %}
+            <h2>{{ item.title }}</h2>
+        {% endfor %}
+    </div>
+</div>
+{% endblock content %}
